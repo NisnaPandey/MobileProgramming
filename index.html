@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fun City & Math Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2 id="mainTitle">Welcome to Fun City & Math Game!</h2>
+
+  <!-- Buttons to customize title and background -->
+  <div>
+    <button id="btnFont">Change Title Font</button>
+    <button id="btnFontSize">Change Title Font Size</button>
+    <button id="btnColor">Change Background Color</button>
+  </div>
+
+  <!-- City Section -->
+  <div id="countries">
+    <div class="city city1">
+      <h4>New York</h4>
+      <p>New York is the largest city in the USA.</p>
+    </div>
+    <div class="city city2">
+      <h4>Paris</h4>
+      <p>Paris is the capital city of France.</p>
+    </div>
+    <div class="city city3">
+      <h4>Tokyo</h4>
+      <p>Tokyo is the capital city of Japan.</p>
+    </div>
+    <div class="city city4">
+      <h4>Sydney</h4>
+      <p>Sydney is a major city in Australia.</p>
+    </div>
+  </div>
+
+  <!-- Fun Math Game -->
+  <div class="math-section">
+    <h3>Fun Math Challenge!</h3>
+    <p>Select difficulty and solve the math question:</p>
+    <div>
+      <label for="difficulty">Difficulty:</label>
+      <select id="difficulty">
+        <option value="easy">Easy (1-20)</option>
+        <option value="medium" selected>Medium (1-50)</option>
+        <option value="hard">Hard (1-100)</option>
+      </select>
+    </div>
+    <div id="question"></div>
+    <input type="number" id="answer" placeholder="Your answer">
+    <select id="operation">
+      <option value="add">Add (+)</option>
+      <option value="subtract">Subtract (-)</option>
+      <option value="multiply">Multiply (×)</option>
+      <option value="divide">Divide (÷)</option>
+    </select>
+    <button id="btnSubmit">Submit</button>
+    <p id="result">Result: </p>
+    <p id="score">Score: 0 / 0</p>
+    <p id="correctAnswerDisplay"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
