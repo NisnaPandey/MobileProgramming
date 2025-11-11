@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f1a2a2;
+  padding: 20px;
+}
+#countries {
+  background-color: rgb(237, 192, 133);
+  width: 500px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+h2 {
+  color: teal;
+  font-family: 'Times New Roman', serif;
+}
+.city {
+  margin: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(250, 122, 214);
+}
+.city1 { background-color: purple; }
+.city2 { background-color: rgb(250, 245, 245); }
+.city3 { background-color: burlywood; color: black; }
+.city4 { background-color: aqua; color: black; }
+button {
+  margin: 5px;
+  padding: 8px 14px;
+  background-color: teal;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: darkcyan;
+}
+.math-section {
+  margin-top: 20px;
+  background-color: #eaf6f6;
+  padding: 15px;
+  border-radius: 5px;
+}
+input {
+  width: 60px;
+  padding: 5px;
+  margin: 5px;
+}
+
+select {
+  padding: 5px;
+  margin: 5px;
+}
+#score {
+  font-weight: bold;
+  margin-top: 10px;
+  color: darkgreen;
+}
+#correctAnswerDisplay {
+  font-weight: bold;
+  color: darkblue;
+  margin-top: 5px;
+}
