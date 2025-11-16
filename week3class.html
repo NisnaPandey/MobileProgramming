@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Effects</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      background-color: rgba(72, 124, 145, 0.804);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    #box {
+      width: 150px;
+      height: 150px;
+      background-color: rgb(231, 200, 242);
+      color: rgb(59, 56, 56);
+      line-height: 150px;
+      font-size: 18px;
+      border-radius: 10px;
+      margin: 0 auto;
+      position: relative;
+      transition: all 0.5s ease;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: hotpink;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: deeppink;
+    }
+  </style>
+</head>
+
+<body>
+  <h1> jQuery Animation </h1>
+
+  <div id="box"> Hellooooo!</div>
+
+  <button id="start">Start Animation</button>
+
+  <script>
+    $(document).ready(function() {
+      $("#start").click(function() {
+        let box = $("#box");
+
+        // Move right
+        box.animate({ left: "200px" }, 1000)
+
+        // Resize
+        .animate({ height: "250px", width: "250px" }, 1000)
+
+        // HIDE effect added here
+        .hide(800)
+
+        // SHOW again before next steps
+        .show(800)
+
+        // Change color to red
+        .queue(function(next) {
+          box.css("background-color", "lightblue");
+          next();
+        })
+
+        // Change text + styling
+        .queue(function(next) {
+          box.text("Changed!");
+          box.css({
+            "font-size": "30px",
+            "color": "darkgreen"
+          });
+          next();
+        })
+
+        // Fade out/in
+        .fadeOut(6000)
+        .fadeIn(5000)
+
+        // Purple + resize
+        .queue(function(next) {
+          box.css("background-color", "yellow");
+          box.animate({ height: "300px", width: "200px" }, 2000);
+          next();
+        })
+
+        // Move back to left
+        .animate({ left: "0px" }, 2000)
+
+        // Final text + color change
+        .queue(function(next) {
+          box.text("Helloooo sakyo");
+          box.css({
+            "background-color": "pink",
+            "color": "white",
+            "font-size": "22px"
+          });
+          next();
+        });
+      });
+    });
+  </script>
+</body>
+</html>
